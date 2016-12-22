@@ -1,0 +1,21 @@
+﻿<Window x:Class="CurrencyAnalyzer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Simple currency analyzer" Height="200" Width="525" ResizeMode="NoResize">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock VerticalAlignment="Center">Enter currency (3 letters)</TextBlock>
+        <TextBox Height="25" Margin="5" Grid.Column="1" Name="textBoxCurrency"></TextBox>
+        <Button Grid.Column="2" Margin="5" Click="Button_Click">Get trend</Button>
+        
+        <TextBlock Grid.Row="2" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Name="textBlockTrend">Result will be here</TextBlock>
+    </Grid>
+</Window>

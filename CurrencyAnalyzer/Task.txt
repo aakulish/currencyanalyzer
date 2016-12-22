@@ -1,0 +1,42 @@
+﻿Vasya is a keen traveller, however the currency rates proved to be a real headache lately
+It is also a bit of a trouble to keep monitoring things manually on a daily basis. 
+One of Vasya's friends suggested a solution:
+"Why don't you write a small utility program that will download the latest rates each day
+from a RESTful web-service and do all the comparison automatically?"
+
+"What's a web-service?", Vasya thought, "is it a web-site or something else? How do I
+access it from my C# program?" Unfortunately web-services were not part of the programming
+course at the time Vasya studied at HSE. Luckily things changed and now you can help
+Vasya solve his problem.
+
+Write a small graphical application that will query the exchange rate from RUB to a given
+currency (entered in a textbox) for the last three days and print the trend as a string
+with three possible values:
+increasing, decreasing or unstable
+
+
+Here's a documentation from the API website:
+
+Fixer.io is a free JSON API for current and historical foreign exchange rates published by the European Central Bank.
+The rates are updated daily around 3PM CET.
+
+Get the latest foreign exchange reference rates in JSON format.
+http://api.fixer.io/latest
+Get historical rates for any day since 1999.
+http://api.fixer.io/2000-01-03
+Rates are quoted against the Euro by default. Quote against a different currency by setting the base parameter in your request.
+http://api.fixer.io/latest?base=USD
+Request specific exchange rates by setting the symbols or currencies parameter.
+http://api.fixer.io/latest?symbols=USD,GBP
+Make cross-domain JSONP requests.
+http://api.fixer.io/latest?callback=?
+An HTTPS endpoint is available.
+https://api.fixer.io/latest
+
+
+Note that currency rates are not updated on some of the days (mostly on weekends). Take the preceeding days.
+
+Hints:
+
+DateTime.Now returns the current date and time
+You can use the AddDays(-1) method to go back 1 day
